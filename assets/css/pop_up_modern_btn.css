@@ -1,0 +1,233 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --verde: #57B856;
+    --verm:  #FA8072;
+    --azul: #56BFDF;
+    --ama: #F2AE42;
+    --confirm: #42CF89;
+}
+
+.flex {
+    display: flex;
+}
+
+.f-1 {
+    order: 1;
+    margin-right: 10px;
+}
+
+.f-2 {
+    order: 2;
+}
+
+.jfy-ctt {
+    justify-content: flex-end;
+}
+
+.btn_cancel-line {
+    background-color: #fff;
+    color: #777;
+    border: 1px solid #777;
+    border-radius: 3px;
+    padding: 10px;
+    text-shadow: none;
+    font-size: 15px;
+    text-decoration: none;
+    max-width: 60px;
+}
+
+.btn_cancel-line:hover,
+.btn_cancel-line:active {
+    transition: all 0.5s;
+    cursor: pointer;
+    color: #666;
+    background-color: #eee;
+    border: 1px solid #666;
+}
+
+.btn_add {
+    background-color: #42CF89;
+    color: white;
+    border-style: none;
+    border-radius: 3px;
+    padding: 10px;
+    text-shadow: none;
+    font-size: 15px;
+    text-decoration: none;
+    /* max-width: 60px; */
+}
+
+.btn_add:hover,
+.btn_add:active {
+    transition: all 0.5s;
+    cursor: pointer;
+    background-color: #66D8A0;
+}
+
+
+.btn_del {
+    background-color: #FA8072;
+    color: white;
+    border-style: none;
+    border-radius: 3px;
+    padding: 10px;
+    text-shadow: none;
+    font-size: 15px;
+    text-decoration: none;
+    /* max-width: 60px; */
+}
+
+.btn_del:hover,
+.btn_del:active {
+    transition: all 0.5s;
+    cursor: pointer;
+    background-color: #ff9488;
+}
+
+.btn_save {
+    background-color: #56BFDF;
+    color: white;
+    border-style: none;
+    border-radius: 3px;
+    padding: 10px;
+    text-shadow: none;
+    font-size: 15px;
+    text-decoration: none;
+    /* max-width: 60px; */
+}
+
+.btn_save:hover,
+.btn_save:active {
+    transition: all 0.5s;
+    cursor: pointer;
+    background-color: #6fd1ee;
+}
+
+.btn_alert {
+    background-color: #F2AE42;
+    color: white;
+    border-style: none;
+    border-radius: 3px;
+    padding: 10px;
+    text-shadow: none;
+    font-size: 15px;
+    text-decoration: none;
+    /* max-width: 60px; */
+}
+
+.btn_alert:hover,
+.btn_alert:active {
+    transition: all 0.5s;
+    cursor: pointer;
+    background-color: #ffc364;
+}
+
+/* FULLSCREEN POPUP WRAPPER */
+.popwrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5); /* DEIXAR FUNDO ESCURO */
+    display: none;
+}
+
+/* CENTER POPUP BOX */
+#popbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 640px;
+    min-height: 320px;
+    background-color: #fff;
+    border-radius: 5px;
+    /* border-top: 7px solid  #42CF89; */
+}
+
+/* CLOSE BUTTON */
+/* #popclose {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+} */
+.pos-db {
+    /* float: right; */
+    margin-top: 10px;
+}
+/* .pos-db {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+} */
+
+
+.pop-header {
+    margin: 20px;
+    margin-top: 40px;
+    border-bottom: 1px solid #ddd;
+    color: rgb(68, 68, 68);
+}
+
+.pop-body {
+    margin: 20px;
+    min-height: 135px;
+}
+
+.pop-footer {
+    /* position: absolute;
+    top: 20px;
+    right: 20px; */
+    margin: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.pop-icon {
+    position: absolute;
+    top: -40px;
+    right: 280px;
+    width: 80px;
+    height: 80px;
+    /* background-color: #42CF89; */
+    border-radius: 40px;
+
+}
+
+.pop-icon i {
+    display: block;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    font-size: 50px;
+    color: #fff;
+}
+
+.header-save {
+    border-top: 7px solid var(--azul);
+}
+.icon-save {
+    background-color: var(--azul);
+}
+
+.header-confirm {
+    border-top: 7px solid var(--confirm);
+}
+.icon-confirm {
+    background-color: var(--confirm);
+}
+
+.header-alert {
+    border-top: 7px solid var(--ama);
+}
+.icon-alert {
+    background-color: var(--ama);
+}
+
+.header-delete {
+    border-top: 7px solid var(--verm);
+}
+.icon-delete {
+    background-color: var(--verm);
+}
