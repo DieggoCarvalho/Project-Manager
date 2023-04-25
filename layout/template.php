@@ -9,12 +9,23 @@
 	<link rel="stylesheet" href="assets/css/normalize.css" />
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
     <script src="assets/js/fontawesome.js" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/pop_up_modern_btn.js"></script>
 <?php } ?>
 <!-- end function HeadMig -->
+
 <!-- HeaderMig -->
 <?php function HeaderMig(){ ?>
 ...
 <?php } ?>
 <!-- end function HeaderMig -->
+
+<!-- FooterMig -->
+<?php function FooterMig(){ ?>
+    <footer>
+        <p>&copy; Copyright - Project Manager, <span id="current-year"></span>. Todos os direitos reservados. </p>
+    </footer>
+    
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/pop_up_modern_btn.js"></script>
+<?php } ?>
+<!-- end function FooterMig -->
+

@@ -34,3 +34,59 @@ input[type=number] {
     display: flex;
     flex-wrap: wrap;
 }
+
+
+/* MÓDULO criarProjeto */
+form {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+legend {
+  text-align: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 15px;
+  /* font-size: 18px; */
+}
+fieldset {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  border: none;
+}
+label {
+  align-self: flex-start;
+  padding-left: 1.5rem;
+}
+
+input[type="text"] {
+  margin-top: 10px;
+  width: 90%;
+  height: 30px;
+  padding: 2px;
+}
+
+.erro {
+  /* width: 100%;
+  background-color: #ff0000;
+  height: 20px;
+  color: #fff; */
+  color: #ff0000;
+}
+
+.alert {
+  /* width: 100%;
+  background-color: rgb(20, 145, 35);
+  height: 20px;
+  color: #fff; */
+  color: rgb(20, 145, 35);
+  margin: auto;
+  text-align: center;
+}
+/* endMÓDULO criarProjeto */

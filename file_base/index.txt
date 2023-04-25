@@ -1,0 +1,15 @@
+<?php $nomeTela = "Index | dPROJETOb"; include 'layout/template.php'; //Incluir Layout ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <?php HeadTemplate(); //Incluir metadados ?>
+</head>
+<body>
+
+   <?php HeaderTemplate(); //Incluir Cabeçalho?>
+    <main>
+    <?php echo $_SERVER["REQUEST_URI"]; ?>
+    </main>
+    <?php FooterTemplate(); //Incluir Rodapé?>
+</body>
+</html>

@@ -1,0 +1,36 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    /* VARIÁVEIS */
+    --bg: #292E35;
+    --main: #42CF89;
+    --fnt: #ffffff;
+    /* endVARIÁVEIS */
+}
+
+body {
+    /* remover espaços laterais da página com o navegador */
+    margin: 0;
+    padding: 0;
+    /* ------------------------------------------------- */
+}
+
+/* remover setas input type number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}

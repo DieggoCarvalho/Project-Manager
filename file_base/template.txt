@@ -1,0 +1,29 @@
+<!-- HeadTemplate -->
+<?php function HeadTemplate(){ ?>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=0" />
+    <title><?php global $nomeTela; echo $nomeTela; ?></title>
+    <link rel="stylesheet" href="http://localhost/dPROJETOb/assets/css/style.css" />
+	<link rel="stylesheet" href="http://localhost/dPROJETOb/assets/css/normalize.css" />
+    <link rel="shortcut icon" href="http://localhost/dPROJETOb/assets/img/favicon.png" type="image/x-icon" />
+    <script src="http://localhost/dPROJETOb/assets/js/fontawesome.js" crossorigin="anonymous"></script>
+<?php } ?>
+<!-- end function HeadTemplate -->
+
+<!-- HeaderTemplate -->
+<?php function HeaderTemplate(){ ?>
+    <header>
+        ...
+    </header>
+<?php } ?>
+<!-- end function HeaderTemplate -->
+
+<!-- FooterTemplate -->
+<?php function FooterTemplate(){ ?>
+    <footer>
+        <p>&copy; Copyright - dPROJETOb, <span id="current-year"></span>. Todos os direitos reservados. </p>
+    </footer>
+    <script src="http://localhost/dPROJETOb/assets/js/script.js"></script>
+<?php } ?>
+<!-- end function FooterTemplate -->
