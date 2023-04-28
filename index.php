@@ -16,6 +16,19 @@
             <section class="menu-edit">
                 <button onclick="nshow(1)" class="btn_add" ><i class="fas fa-plus"></i> Cadastrar</button>
             </section>
+            <section class="l-project">
+                <?php
+                    // Lê o conteúdo do arquivo
+                    $arquivo =  "database/dados.json";
+                    $dados_json = file_get_contents($arquivo);
+                    // Converte o JSON para um array -> true: associativo, key=>valor
+                    $projetos = json_decode($dados_json, true);
+                    // Exibe os projetos
+                    foreach ($projetos as $projeto) {
+                        echo "<b>PROJETO: </b> " . $projeto["nome"] . "<p>Descrição: " . $projeto["descricao"] . "</p><br>";
+                    }
+                ?>
+            </section>
         </div>
     </main>
     <?php FooterMig(); //Incluir Rodapé ?>
