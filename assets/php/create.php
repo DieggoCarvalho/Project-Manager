@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         /* Else - Criação do Projeto */
         $nome = test_input($_POST["nomeProjeto"]);
         $nome_projeto = $nome;
-        $nome = "../../" .$nome. "/";
+        $nome = "../" .$nome. "/";
         $local = $nome. "/";
         $pcss = $nome. "assets/css/";
         $pfont = $nome. "assets/font/";
@@ -71,6 +71,34 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $alertNome = "Projeto " .$nome_projeto. " criado com sucesso!";
             setcookie("alerta", $alertNome, time()+5);
             header("Location: index.php");
+
+
+// SALVAR NO ARQUIVO O PROJETO
+            // Recuperar dados do formulário para inserir no arquivo json.
+            $descricao = $_POST["descProjeto"];
+            // Criar Aruqivo Json se não existir ainda;
+            $arquivo = "database/dados.json";
+            $dados = fopen($arquivo, "a+"); //talvez não seja necessário
+
+            // Lê os dados já cadastrados do arquivo
+            $dados_json = file_get_contents($arquivo);
+            $projetos = json_decode($dados_json, true);
+
+            // Adiciona o novo projeto aos dados existentes
+            // $novo_projeto = array("nome" => $nome_projeto, "descricao" => $descricao);
+            $novo_projeto=["nome" => $nome_projeto, "descricao" => $descricao]; // w3schools dica https://www.w3schools.com/php/func_array.asp
+            $projetos[] = $novo_projeto;
+            /* 
+            PHP automaticamente atribui uma nova chave numérica ao projeto adicionado, 
+            correspondente à última posição do array. Dessa forma, o 
+            novo projeto é adicionado ao final do array sem apagar os dados já existentes.
+            */
+
+            // Salva os dados atualizados no arquivo
+            $dados_json = json_encode($projetos);
+            file_put_contents($arquivo, $dados_json);
+            // Exibe uma mensagem de confirmação
+            // echo "Projeto salvo com sucesso!";
     }
     /* endElse - Criação do Projeto */
     
@@ -95,5 +123,6 @@ function trocar_malas($arquivo, $mala, $valor) {
     $str = str_replace($mala, $valor, $str);
     file_put_contents($arquivo, $str);
 }
+
 
 ?>

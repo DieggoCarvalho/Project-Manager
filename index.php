@@ -27,12 +27,14 @@
                 <h1 id="poptitle">Cadastrar Projeto</h1>
             </div>
             <div class="pop-body">
-                <form action="" method="post" autocomplete = "on" target="_self"  name="cadProjeto" accept-charset="utf-8" id="cadProjeto">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" autocomplete = "on" target="_self"  name="cadProjeto" accept-charset="utf-8" id="cadProjeto">
                     <fieldset>
                         <!-- <legend>Cadastro de Projeto</legend> -->
-                        <label for="nome">Nome do Projeto</label>
+                        <label for="nome">Nome</label>
                         <input type="text" name="nomeProjeto" id="nome" required placeholder="Insira o nome do projeto..." autofocus autocomplete="on">
                         <span class="erro"> <?php if (isset($_COOKIE['erro'])) { echo $_COOKIE['erro']; unset($_COOKIE['erro']); };?> </span>
+                        <label for="desc">Descrição</label>
+                        <input type="text" name="descProjeto" id="desc" required placeholder="Insira a descrição..." autocomplete="on"/>
                     </fieldset>
                 </form>
                 <!-- <p id="poptext">Você deseja confirmar as alterações realizadas?</p> -->
