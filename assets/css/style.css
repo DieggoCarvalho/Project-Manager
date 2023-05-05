@@ -91,3 +91,27 @@ input[type="text"] {
   text-align: center;
 }
 /* endMÓDULO criarProjeto */
+
+/* BLOCOS */
+
+table caption {
+  caption-side: bottom;
+}
+
+.container_main {
+  margin: auto;
+  width: 1000px;
+}
+
+h1 {
+  background-color: var(--main);
+  padding: 5px;
+  color: var(--fnt);
+}
+
+th, td {
+	height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	border: 0.76px solid #000000;
+}
